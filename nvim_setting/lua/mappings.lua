@@ -42,8 +42,8 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- 终端
-vim.keymap.set('n', '<S-t>', '<CMD>lua require("FTerm").toggle()<CR>')
-vim.keymap.set('t', '<S-t>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('n', '<leader><leader>t', '<CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('t', '<leader><leader>t', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
 
 local picker = require('window-picker')
 -- 定义一个函数来跳转到选定的窗口

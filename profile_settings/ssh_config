@@ -1,0 +1,14 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Host 10.96.77.46
+    HostName 10.96.77.46
+    User root
+Host git.xiaojukeji.com
+    HostName git.xiaojukeji.com
+    User git
+    IdentityFile ~/.ssh/gitlab
+PubkeyAcceptedKeyTypes +ssh-rsa
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github
+PubkeyAcceptedKeyTypes +ssh-rsa

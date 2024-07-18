@@ -1,0 +1,7 @@
+set number
+inoremap jk <ESC>
+nnoremap q :q<CR>
+nnoremap Q :q!<CR>
+
+set clipboard^=unamed,unnamedplus
+
