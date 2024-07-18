@@ -1,0 +1,38 @@
+{
+    "hover.floatConfig": { "border": true, "rounded": true, "focusable": true },
+    "suggest.floatConfig": { "border": true, "rounded": true },
+    "diagnostic.floatConfig": { "border": true, "rounded": true },
+    "signature.floatConfig": { "border": true, "rounded": true },
+    "outline.autoPreview": true,
+    "list.floatPreview":true,
+    "list.maxPreviewHeight" : 20,
+    "languageserver": {
+        "go": {
+            "command": "gopls",
+            "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+            "filetypes": ["go"],
+            "initializationOptions": {
+                "usePlaceholders": false,
+                "completeUnimported": true,
+            }
+        },
+        "clangd": {
+            "command": "clangd",
+            "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+            "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+        }
+    },
+    "snippets.ultisnips.pythonPrompt": false,
+    "list.source.lists.defaultOptions": ["--number-select"],
+    "list.source.symbols.defaultOptions": ["--number-select", "--auto-preview", "-I"],
+    "list.source.outline.defaultOptions": ["--number-select", "--auto-preview"],
+    "diagnostic.errorSign": "",
+    "diagnostic.warningSign": "",
+    "diagnostic.infoSign": "",
+    "diagnostic.hintSign": "",
+    "diagnostic.refreshOnInsertMode":true,
+    "diagnostic.virtualText": true,
+    "diagnostic.virtualTextCurrentLineOnly": false,
+    "diagnostic.virtualTextPrefix": "  Attention: ",
+    "coc.preferences.formatOnSave": true,
+}
