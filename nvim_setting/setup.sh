@@ -9,4 +9,4 @@ cp ./init.lua $nvim_path
 cp -r ./lua $nvim_path
 
 # 配置vim
-cat ./profile >> $HOME/.vimrc
+cat ./vimrc >> $HOME/.vimrc
