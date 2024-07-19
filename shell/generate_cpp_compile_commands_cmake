@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+
+if [ ! -f "compile_commands.json"]; then
+    echo "generate compile_commands.json first!!!"
+    exit 1
+fi
+
+jq 'map(.command |= gsub("-mcmodel=medium";""))' compile_commands.json > compile_commands.tmp && mv compile_commands.tmp compile_commands.json
+
+rm -rf CMakefiles Makefile cmake_install.cmake CMakeCache.txt
+
+echo "success!!!"

@@ -1,7 +1,11 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH=$PATH:/Users/didi/Documents/Others/nvim-macos-arm64/bin
+export PATH=$PATH:/Users/didi/Documents/Others/laptop_settings/shell
 
 # 快捷键
 alias dssh="ssh xuxiaorui@relay.sys.xiaojukeji.com -p 35000"
 alias xssh="ssh root@10.96.77.46"
-alias xmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
+alias xmake="generate_cpp_compile_commands_cmake"
+alias xbear="generate_cpp_compile_commands_make"
 alias ll="ls -lh"
+alias cppformat="cp /Users/didi/Documents/Others/laptop_settings/.clang-format ./"

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ ! -f "compile_commands.json"]; then
+    echo "generate compile_commands.json first!!!"
+    exit 1
+fi
+
+jq 'map(.command |= gsub("-mcmodel=medium";""))' compile_commands.json > compile_commands.tmp && mv compile_commands.tmp compile_commands.json
+
+echo "success!!!"
