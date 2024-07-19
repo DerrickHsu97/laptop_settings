@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "git log --format='%aN' | sort -u | while read name; do echo -en \"$name\\t\"; git log --author=\"$name\" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\\n\", add, subs, loc }' -; done",
+    "uid" : "B8F012B2-5CDE-42E6-8804-4982DEC1D413",
+    "name" : "git代码量",
+    "keyword" : "gitallcmt"
+  }
+}

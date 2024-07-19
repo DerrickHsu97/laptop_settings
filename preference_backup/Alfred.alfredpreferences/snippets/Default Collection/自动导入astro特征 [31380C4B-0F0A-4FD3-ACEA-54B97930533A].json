@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "curl -s -H \"data-origin:preview\" -H \"x-jwt:.eyJ1c2VybmFtZSI6ImN1cmwiLCJyb2xlcyI6W3sibmFtZSI6ImFkbWluIn1dfQ==.\" 127.0.0.1:9507\/v1\/fms\/add_feature_from_astro",
+    "uid" : "31380C4B-0F0A-4FD3-ACEA-54B97930533A",
+    "name" : "自动导入astro特征",
+    "keyword" : "astro"
+  }
+}

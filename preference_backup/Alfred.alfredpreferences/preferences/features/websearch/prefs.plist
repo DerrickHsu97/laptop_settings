@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>0A827A9C-E255-4B77-89B8-E88380E7EB49</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>dff</string>
+			<key>text</key>
+			<string>Open dufe-fms webssh for '{query}'</string>
+			<key>url</key>
+			<string>https://odin.xiaojukeji.com/#/webssh?&amp;type=docker&amp;name=dufe-fms-sf-d8f8c-{query}.docker.us01</string>
+		</dict>
+		<key>47CE2650-98BF-4A4B-AA4B-67F918323C81</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>jzz</string>
+			<key>text</key>
+			<string>工作居住证</string>
+			<key>url</key>
+			<string>https://dhr.didichuxing.com/process/apply/appointment?uuid=2ab4125a7f164704830b6dbaafeb66cd&amp;taskId=56cb2c78-0e9b-11ef-84e9-0894ef6a0d1c</string>
+		</dict>
+		<key>48AF3360-A692-4590-9A3A-12D96E54530E</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>bd</string>
+			<key>text</key>
+			<string>Search Baidu for '{query}'</string>
+			<key>url</key>
+			<string>https://www.baidu.com/s?wd={query}</string>
+		</dict>
+		<key>5D2B7499-7174-4D6D-9ABA-BAE552146C03</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>ppre</string>
+			<key>text</key>
+			<string>Open pre webssh</string>
+			<key>url</key>
+			<string>https://odin.xiaojukeji.com/#/webssh?&amp;type=machine&amp;name=engine-duse-pre00.us01</string>
+		</dict>
+		<key>FA43CC40-2BA0-407D-8957-2BB1BCD7FD16</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>df</string>
+			<key>text</key>
+			<string>Open dufe-api webssh for '{query}'</string>
+			<key>url</key>
+			<string>https://odin.xiaojukeji.com/#/webssh?&amp;type=docker&amp;name=dufe-api-sf-c9cdb-{query}.docker.us01</string>
+		</dict>
+	</dict>
+	<key>onlyShowEnabledInPrefs</key>
+	<true/>
+</dict>
+</plist>

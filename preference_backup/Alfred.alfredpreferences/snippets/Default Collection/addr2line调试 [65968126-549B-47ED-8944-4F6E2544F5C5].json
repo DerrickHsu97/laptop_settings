@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "addr2line -Cfip -e ",
+    "uid" : "65968126-549B-47ED-8944-4F6E2544F5C5",
+    "name" : "addr2line调试",
+    "keyword" : "addr2line"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "curl \"http:\/\/127.0.0.1:8862\/debug?debug_param={cursor}&debug_value=1\"",
+    "uid" : "5BA9B1BA-AD96-4A69-8F00-CC6B05542997",
+    "name" : "开启dufe-api调试模式",
+    "keyword" : "dufe debug"
+  }
+}
