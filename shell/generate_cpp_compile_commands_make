@@ -1,5 +1,7 @@
 #!/bin/bash
 
+bear -- make
+
 if [ ! -f "compile_commands.json"]; then
     echo "generate compile_commands.json first!!!"
     exit 1
