@@ -1,13 +1,20 @@
 #!/bin/bash
 
-cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 
 
-if [ ! -f "compile_commands.json"]; then
+if [ ! -f "compile_commands.json" ]; then
     echo "generate compile_commands.json first!!!"
     exit 1
 fi
 
 jq 'map(.command |= gsub("-mcmodel=medium";""))' compile_commands.json > compile_commands.tmp && mv compile_commands.tmp compile_commands.json
+if [ $? -ne 0 ]; then
+    echo "motify compile_commands.json fail!!!"
+    exit 1
+fi
+# jq 'map(.command |= gsub("-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk";""))' compile_commands.json > compile_commands.tmp && mv compile_commands.tmp compile_commands.json
+# jq 'map(.command |= gsub("/Library/Developer/CommandLineTools/usr/bin/c++";"/opt/homebrew/bin/c++-14"))' compile_commands.json > compile_commands.tmp && mv compile_commands.tmp compile_commands.json
+jq 'map(.command |= gsub("-fopenmp";""))' compile_commands.json > compile_commands.tmp && mv compile_commands.tmp compile_commands.json
 
 rm -rf CMakefiles Makefile cmake_install.cmake CMakeCache.txt
 

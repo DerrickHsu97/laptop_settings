@@ -15,6 +15,17 @@
 			<key>url</key>
 			<string>https://odin.xiaojukeji.com/#/webssh?&amp;type=docker&amp;name=dufe-fms-sf-d8f8c-{query}.docker.us01</string>
 		</dict>
+		<key>258462FD-DDC9-416D-88C1-A3A6B2BFC314</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>xqq</string>
+			<key>text</key>
+			<string>北京市小汽车</string>
+			<key>url</key>
+			<string>https://xkczb.jtw.beijing.gov.cn/</string>
+		</dict>
 		<key>47CE2650-98BF-4A4B-AA4B-67F918323C81</key>
 		<dict>
 			<key>enabled</key>
@@ -47,6 +58,17 @@
 			<string>Open pre webssh</string>
 			<key>url</key>
 			<string>https://odin.xiaojukeji.com/#/webssh?&amp;type=machine&amp;name=engine-duse-pre00.us01</string>
+		</dict>
+		<key>9B2EE905-F805-4F21-8CC1-50A6073243A1</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>bjrc</string>
+			<key>text</key>
+			<string>北京人才中心</string>
+			<key>url</key>
+			<string>https://fw.bjrcgz.gov.cn/person-platform/#/person-platform/overview</string>
 		</dict>
 		<key>FA43CC40-2BA0-407D-8957-2BB1BCD7FD16</key>
 		<dict>

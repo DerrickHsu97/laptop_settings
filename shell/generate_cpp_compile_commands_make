@@ -1,12 +1,27 @@
 #!/bin/bash
 
-bear -- make
-
-if [ ! -f "compile_commands.json"]; then
-    echo "generate compile_commands.json first!!!"
+if [ -f "Makefile" ]; then
+    file="Makefile"
+elif [ -f "makefile" ]; then
+    file="makefile"
+else
+    echo "not makefile exist!!!"
     exit 1
 fi
 
-jq 'map(.command |= gsub("-mcmodel=medium";""))' compile_commands.json > compile_commands.tmp && mv compile_commands.tmp compile_commands.json
+sed 's/-mcmodel=medium//g' "$file" > "tmp_makefile"
+bear -- make -f tmp_makefile
+
+if [ $? -ne 0 ]; then 
+    echo "generate fail!!!"
+    exit 1
+fi
+
+# if [ ! -f "compile_commands.json"]; then
+#     echo "generate compile_commands.json first!!!"
+#     exit 1
+# fi
+#
+# jq 'map(.command |= gsub("-mcmodel=medium";""))' compile_commands.json > compile_commands.tmp && mv compile_commands.tmp compile_commands.json
 
 echo "success!!!"
