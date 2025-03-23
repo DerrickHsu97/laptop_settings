@@ -25,7 +25,7 @@ log_info "OS=${OS}"
 CUR_DIR=$(pwd)
 mkdir -p $HOME/derrick_config
 cd $HOME/derrick_config
-if [ ! -f "$CUR_DIR/.derrick_profile" ]; then
+if [ ! -f "$HOME/derrick_config/.derrick_profile" ]; then
     touch .derrick_profile
 fi
 
