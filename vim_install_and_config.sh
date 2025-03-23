@@ -31,31 +31,31 @@ fi
 
 # 安装依赖
 log_info "========== Download&Install Neovim... =========="
-if [ ! -d $HOME/nvim-linux-arm64 ]; then
+if [ ! -d $HOME/derrick_config/nvim-linux-arm64 ]; then
     wget https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-arm64.tar.gz
     tar -zxvf nvim-linux-arm64.tar.gz
-    echo "export PATH:$PATH:$HOME/nvim-linux-arm64/bin" >> ./derrick_profile
+    echo "export PATH:$PATH:$HOME/derrick_config/nvim-linux-arm64/bin" >> ./derrick_profile
 fi
 log_info "========== Done! =========="
 
 log_info "========== Download&Install ripgrep... =========="
-if [ ! -d $HOME/ripgrep-14.1.1-x86_64-unknown-linux-musl ]; then
+if [ ! -d $HOME/derrick_config/ripgrep-14.1.1-x86_64-unknown-linux-musl ]; then
     wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz
     tar -zxvf ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz
-    echo "export PATH:$PATH:$HOME/ripgrep-14.1.1-x86_64-unknown-linux-musl" >> ./derrick_profile
+    echo "export PATH:$PATH:$HOME/derrick_config/ripgrep-14.1.1-x86_64-unknown-linux-musl" >> ./derrick_profile
 fi
 log_info "========== Done! =========="
 
 log_info "========== Download&Install clangd... =========="
-if [ ! -d $HOME/clangd_19.1.2 ]; then
+if [ ! -d $HOME/derrick_config/clangd_19.1.2 ]; then
     wget https://github.com/clangd/clangd/releases/download/19.1.2/clangd-linux-19.1.2.zip
     unzip ./clangd-linux-19.1.2.zip
-    echo "export PATH:$PATH:$HOME/clangd_19.1.2/bin" >> ./derrick_profile
+    echo "export PATH:$PATH:$HOME/derrick_config/clangd_19.1.2/bin" >> ./derrick_profile
 fi
 log_info "========== Done! =========="
 
 log_info "========== Download&Install Nodejs... =========="
-    if [ ! -f ./install.sh ]; then
+if [ ! -f ./install.sh ]; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
     \. "$HOME/.nvm/nvm.sh"
     nvm install 22
