@@ -23,48 +23,50 @@ fi
 log_info "OS=${OS}"
 
 CUR_DIR=$(pwd)
-mkdir $HOME/derrick_config
+mkdir -p $HOME/derrick_config
 cd $HOME/derrick_config
-touch .derrick_profile
+if [ ! -f .derrick_profile ]; then
+    touch .derrick_profile
+fi
 
 # 安装依赖
 log_info "========== Download&Install Neovim... =========="
 if [ ! -d $HOME/nvim-linux-arm64 ]; then
-wget https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-arm64.tar.gz
-tar -zxvf nvim-linux-arm64.tar.gz
-echo "export PATH:$PATH:$HOME/nvim-linux-arm64/bin" >> ./derrick_profile
+    wget https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-arm64.tar.gz
+    tar -zxvf nvim-linux-arm64.tar.gz
+    echo "export PATH:$PATH:$HOME/nvim-linux-arm64/bin" >> ./derrick_profile
 fi
 log_info "========== Done! =========="
 
 log_info "========== Download&Install ripgrep... =========="
 if [ ! -d $HOME/ripgrep-14.1.1-x86_64-unknown-linux-musl ]; then
-wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz
-tar -zxvf ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz
-echo "export PATH:$PATH:$HOME/ripgrep-14.1.1-x86_64-unknown-linux-musl" >> ./derrick_profile
+    wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz
+    tar -zxvf ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz
+    echo "export PATH:$PATH:$HOME/ripgrep-14.1.1-x86_64-unknown-linux-musl" >> ./derrick_profile
 fi
 log_info "========== Done! =========="
 
 log_info "========== Download&Install clangd... =========="
 if [ ! -d $HOME/clangd_19.1.2 ]; then
-wget https://github.com/clangd/clangd/releases/download/19.1.2/clangd-linux-19.1.2.zip
-unzip ./clangd-linux-19.1.2.zip
-echo "export PATH:$PATH:$HOME/clangd_19.1.2/bin" >> ./derrick_profile
+    wget https://github.com/clangd/clangd/releases/download/19.1.2/clangd-linux-19.1.2.zip
+    unzip ./clangd-linux-19.1.2.zip
+    echo "export PATH:$PATH:$HOME/clangd_19.1.2/bin" >> ./derrick_profile
 fi
 log_info "========== Done! =========="
 
 log_info "========== Download&Install Nodejs... =========="
-if [ ! -f ./install.sh ]; then
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
-\. "$HOME/.nvm/nvm.sh"
-nvm install 22
+    if [ ! -f ./install.sh ]; then
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+    \. "$HOME/.nvm/nvm.sh"
+    nvm install 22
 fi
 log_info "========== Done! =========="
 
 log_info "========== Install&Config Nvim... =========="
 if [ ! -d ~/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-cp -r $CUR_DIR/nvim $HOME/.config
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+    cp -r $CUR_DIR/nvim $HOME/.config
 fi
 log_info "========== Done! =========="
 
