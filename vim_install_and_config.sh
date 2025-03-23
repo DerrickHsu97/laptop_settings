@@ -64,7 +64,7 @@ log_info "========== Done! =========="
 
 log_info "========== Install&Config Nvim... =========="
 if [ ! -d ~/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then
-    cp -r ./packer.nvim ~/.local/share/nvim/site/pack/packer/start
+    cp -r $CUR_DIR/packer.nvim ~/.local/share/nvim/site/pack/packer/start
     cp -r $CUR_DIR/nvim $HOME/.config
 fi
 log_info "========== Done! =========="
